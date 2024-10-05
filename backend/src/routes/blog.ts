@@ -1,4 +1,5 @@
-import { createBlogInput } from "@deepakptidar2209/wittywrite_zod_validation";
+
+import { createBlogInput, updateBlogInput } from "@deepakptidar2209/wittywrite_zod_validation_2.0";
 import { PrismaClient } from "@prisma/client/edge";
 import { withAccelerate } from "@prisma/extension-accelerate";
 import { Hono } from "hono";
@@ -66,7 +67,7 @@ export const blogRouter = new Hono<{
   // !----------- TO UPDATE THE BLOG ---------!
   blogRouter.put('/', async(c) => {
     const body = await c.req.json();
-    const {success} = createBlogInput.safeParse(body);
+    const {success} = updateBlogInput.safeParse(body);
     if(!success){
         c.status(411);
         return c.json({

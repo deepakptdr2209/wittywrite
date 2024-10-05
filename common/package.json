@@ -1,5 +1,5 @@
 {
-  "name": "@deepakptidar2209/wittywrite_zod_validation",
+  "name": "@deepakptidar2209/wittywrite_zod_validation_2.0",
   "version": "1.0.0",
   "main": "./dist/index.js",
   "scripts": {
